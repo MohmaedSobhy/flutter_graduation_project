@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/common_pages/ottp_screen.dart';
 import 'package:flutter_graduation_project/common_pages/welcom_page.dart';
+import 'package:flutter_graduation_project/company_screen/company_profile.dart';
+import 'package:flutter_graduation_project/company_screen/job_seeker.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return const MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: OttpScreen(),
+          home:CompanyProfile(),
         );
       },
     );
