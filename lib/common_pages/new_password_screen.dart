@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_graduation_project/common_pages/login_screen.dart';
 import 'package:flutter_graduation_project/widgets/custome_text_form_field.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sizer/sizer.dart';
 
 import '../constanst.dart';
 import '../widgets/cutome_button.dart';
 
 class NewPasswordScreen extends StatelessWidget {
   const NewPasswordScreen({super.key});
+  static String id = "NewPasswordScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class NewPasswordScreen extends StatelessWidget {
                   fontWeight: FontWeight.w800),
             ),
             SizedBox(
-              height: 15.h,
+              height: 5.h,
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
@@ -60,7 +62,12 @@ class NewPasswordScreen extends StatelessWidget {
                 obscureText: true,
               ),
             ),
-            CustomeButton(txt: ConstanstString.confirm, function: () {}),
+            CustomeButton(
+                txt: ConstanstString.confirm,
+                function: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, LoingScreen.Id, (route) => false);
+                }),
           ],
         ),
       ),

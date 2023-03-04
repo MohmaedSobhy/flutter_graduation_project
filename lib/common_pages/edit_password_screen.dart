@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/constanst.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sizer/sizer.dart';
 
 import '../widgets/custome_text_form_field.dart';
 import '../widgets/cutome_button.dart';

@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_graduation_project/constanst.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sizer/sizer.dart';
 
 class CustomeCard extends StatelessWidget {
   final String txt;
-  const CustomeCard({super.key, required this.txt});
+  final Color colorContainerGround;
+  final Color fieldsColors;
+  const CustomeCard(
+      {super.key,
+      required this.txt,
+      required this.colorContainerGround,
+      required this.fieldsColors});
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150.h,
+      height: 25.h,
       margin: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
-          color: ColorManger.darkBlue,
-          borderRadius: BorderRadius.circular(12.r)),
+          color: colorContainerGround, borderRadius: BorderRadius.circular(12)),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -20,14 +24,14 @@ class CustomeCard extends StatelessWidget {
         children: [
           Icon(
             Icons.person,
-            size: 100,
-            color: ColorManger.white,
+            size: 100.sp,
+            color: fieldsColors,
           ),
           Text(
             txt,
             style: TextStyle(
                 fontSize: 25.sp,
-                color: ColorManger.white,
+                color: fieldsColors,
                 fontWeight: FontWeight.w500),
           ),
         ],

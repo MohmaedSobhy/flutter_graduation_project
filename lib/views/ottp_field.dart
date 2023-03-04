@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:sizer/sizer.dart';
 import '../constanst.dart';
 
 class OttpTextField extends StatelessWidget {
@@ -10,8 +9,8 @@ class OttpTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 60.w,
-      height: 60.h,
+      width: 15.w,
+      height: 10.h,
       child: TextFormField(
         cursorColor: ColorManger.darkBlue,
         keyboardType: TextInputType.number,

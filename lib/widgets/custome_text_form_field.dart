@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/constanst.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sizer/sizer.dart';
 
 class CustomeTextFormField extends StatelessWidget {
-  final String label;
-  final String hint;
-  final TextInputType inputType;
-  final bool? obscureText;
-  final Icon? suffixIcon;
-  final Icon PrefixIcon;
-  const CustomeTextFormField(
+  String label;
+  String hint;
+  TextInputType inputType;
+  bool? obscureText;
+  Icon? suffixIcon;
+  Icon PrefixIcon;
+  CustomeTextFormField(
       {super.key,
       required this.label,
       required this.inputType,
@@ -20,22 +20,34 @@ class CustomeTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      keyboardType: inputType,
-      obscureText: (obscureText == null) ? false : obscureText!,
-      decoration: InputDecoration(
-        hintText: hint,
-        label: Text(
-          label,
-          style: TextStyle(color: ColorManger.darkBlue),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: TextFormField(
+        controller: TextEditingController(),
+        keyboardType: inputType,
+        cursorColor: ColorManger.darkBlue,
+        validator: (value) {
+          return null;
+        },
+        obscureText: (obscureText == null) ? false : obscureText!,
+        decoration: InputDecoration(
+          hintText: hint,
+          label: Text(
+            label,
+            style: TextStyle(color: ColorManger.darkBlue),
+          ),
+          suffixIcon: suffixIcon,
+          prefixIcon: PrefixIcon,
+          prefixIconColor: ColorManger.darkBlue,
+          suffixIconColor: ColorManger.darkBlue,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+            borderSide: BorderSide(color: ColorManger.darkBlue),
+          ),
         ),
-        suffixIcon: suffixIcon,
-        prefixIcon: PrefixIcon,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5.r),
-        ),
-        focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: ColorManger.darkBlue)),
       ),
     );
   }

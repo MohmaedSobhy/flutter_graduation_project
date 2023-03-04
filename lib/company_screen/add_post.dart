@@ -8,7 +8,6 @@ class AddPost extends StatelessWidget {
   const AddPost({super.key});
 
   @override
-  
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
@@ -27,133 +26,150 @@ class AddPost extends StatelessWidget {
                         bottomLeft: Radius.circular(60),
                         bottomRight: Radius.circular(60)),
                   ),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.end, children: const [
-                    Padding(
-                      padding:
-                          EdgeInsets.only(bottom: 10, top: 70, right: 170),
-                      child: Text(
-                        'Add Post',
-                        style: TextStyle(
-                            color: Color.fromRGBO(235, 238, 249, 1),
-                            fontSize: 30),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 70),
-                      child: Icon(
-                        Icons.notifications,
-                        size: 40,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ]),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: const [
+                        Padding(
+                          padding:
+                              EdgeInsets.only(bottom: 10, top: 70, right: 170),
+                          child: Text(
+                            'Add Post',
+                            style: TextStyle(
+                                color: Color.fromRGBO(235, 238, 249, 1),
+                                fontSize: 30),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(bottom: 70),
+                          child: Icon(
+                            Icons.notifications,
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ]),
                 ),
-               
-                 const SizedBox(height:15,),
-                      Padding(
-                        padding:  const EdgeInsets.only(top:230,left: 20,right: 20,bottom: 0),
-                        child: TextFormField(
-                          decoration: const InputDecoration(
-                            labelText: 'Job Name',
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(50)),
-                              ),
-                            ),
-                        ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 230, left: 20, right: 20, bottom: 0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Job Name',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                        const SizedBox(height: 15,),
-                      Padding(
-                        padding: const EdgeInsets.only(top:300,left: 20,right: 20,bottom: 0),
-                        child: TextFormField(
-                          
-                            decoration: const InputDecoration(
-                            labelText: 'Career level',
-                            
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(50)),),
-                            ),
-                        ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 300, left: 20, right: 20, bottom: 0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Career level',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                      const SizedBox(height: 15,),
-                      Padding(
-                        padding: const EdgeInsets.only(top:370,left: 20,right: 20,bottom: 0),
-                        child: TextFormField(
-                          
-                            decoration: const InputDecoration(
-                            labelText: 'Post time per day',
-                            
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(50)),),
-                            ),
-                        ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 370, left: 20, right: 20, bottom: 0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Post time per day',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                      const SizedBox(height: 15,),
-                      Padding(
-                        
-                        padding: const EdgeInsets.only(top:440,left: 20,right: 20,bottom: 0),
-                        child: TextFormField(
-                          
-                            decoration: const InputDecoration(
-                            labelText: 'Salary by dollar',
-                          
-                            
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(50)),),
-                            ),
-                        ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 440, left: 20, right: 20, bottom: 0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Salary by dollar',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                      const SizedBox(height: 15,),
-                      Padding(
-                        
-                        padding: const EdgeInsets.only(top:510,left: 20,right: 20,bottom: 0),
-                        child: TextFormField(
-                          
-                            decoration: const InputDecoration(
-                            labelText: 'Work',
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(50)),),
-                            ),
-                        ),
-                        
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 510, left: 20, right: 20, bottom: 0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Work',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 580,left:20 ),
-                        child: Text('Add category',style: TextStyle(fontSize: 25,color:Color.fromRGBO(116, 136, 190, 1) ),),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 580, left: 20),
+                  child: Text(
+                    'Add category',
+                    style: TextStyle(
+                        fontSize: 25, color: Color.fromRGBO(116, 136, 190, 1)),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 630, left: 20, right: 20, bottom: 0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Work',
+                      suffixIcon: Icon(Icons.add),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                       const SizedBox(height: 15,),
-                      Padding(
-                        
-                        padding: const EdgeInsets.only(top:630,left: 20,right: 20,bottom: 0),
-                        child: TextFormField(
-                          
-                            decoration: const InputDecoration(
-                            labelText: 'Work',
-                            suffixIcon: Icon(Icons.add),
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(50)),),
-                            ),
-                        ),
-                        
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                      top: 700, left: 20, right: 20, bottom: 0),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Work',
+                      suffixIcon: Icon(Icons.add),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
-                        const SizedBox(height: 15,),
-                      Padding(
-                        
-                        padding: const EdgeInsets.only(top:700,left: 20,right: 20,bottom: 0),
-                        child: TextFormField(
-                          
-                            decoration: const InputDecoration(
-                            labelText: 'Work',
-                            suffixIcon: Icon(Icons.add),
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(50)),),
-                            ),
-                        ),
-                        
-                      ),
-                
-                
-               
+                    ),
+                  ),
+                ),
               ],
-              
             ),
           ),
-           ),
+        ),
       ),
-           ///////////////////////////////////////////////
+      ///////////////////////////////////////////////
       bottomNavigationBar: Container(
         color: const Color.fromRGBO(116, 136, 190, 1),
         child: const Padding(
@@ -172,15 +188,20 @@ class AddPost extends StatelessWidget {
               duration: Duration(microseconds: 500),
               padding: EdgeInsets.all(16),
               tabs: [
-                
-                GButton(icon: Icons.border_all_outlined, text: 'All Posts',),
+                GButton(
+                  icon: Icons.border_all_outlined,
+                  text: 'All Posts',
+                ),
                 GButton(icon: Icons.copy_all_sharp, text: 'your post'),
-                GButton(icon: Icons.add, text: 'add post',active:true,),
+                GButton(
+                  icon: Icons.add,
+                  text: 'add post',
+                  active: true,
+                ),
                 GButton(icon: Icons.history, text: 'history'),
               ]),
         ),
       ),
-     
     );
   }
 }

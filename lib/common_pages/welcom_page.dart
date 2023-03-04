@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_graduation_project/common_pages/login_screen.dart';
+import 'package:flutter_graduation_project/common_pages/sign_up_screen.dart';
 import 'package:flutter_graduation_project/constanst.dart';
 import 'package:flutter_graduation_project/widgets/cutome_button.dart';
 
@@ -29,12 +31,13 @@ class WelcomePage extends StatelessWidget {
               txt: ConstanstString.login,
               function: () {
                 // navigat to login Screen
+                Navigator.pushReplacementNamed(context, LoingScreen.Id);
               },
             ),
             CustomeButton(
                 txt: ConstanstString.signUp,
                 function: () {
-                  // navigat to signUp Screen
+                  Navigator.pushReplacementNamed(context, SignUpScreen.Id);
                 }),
           ],
         ),
