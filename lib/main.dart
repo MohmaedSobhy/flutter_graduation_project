@@ -7,8 +7,6 @@ import 'package:flutter_graduation_project/common_pages/sign_up_screen.dart';
 import 'package:flutter_graduation_project/common_pages/welcom_page.dart';
 import 'package:flutter_graduation_project/user_screens/user_main_screen.dart';
 import 'package:sizer/sizer.dart';
-import 'package:flutter_graduation_project/company_screen/company_profile.dart';
-import 'package:flutter_graduation_project/company_screen/job_seeker.dart';
 
 void main() {
   runApp(const MyApp());
