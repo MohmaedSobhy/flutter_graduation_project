@@ -16,8 +16,11 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: ColorManger.white,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: CircleAvatar(
-            backgroundImage: NetworkImage(ConstanstString.imageUrl),
+          child: InkWell(
+            onTap: () {},
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(ConstanstString.imageUrl),
+            ),
           ),
         ),
         title: Column(

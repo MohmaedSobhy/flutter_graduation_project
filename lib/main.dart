@@ -5,6 +5,7 @@ import 'package:flutter_graduation_project/common_pages/new_password_screen.dart
 import 'package:flutter_graduation_project/common_pages/ottp_screen.dart';
 import 'package:flutter_graduation_project/common_pages/sign_up_screen.dart';
 import 'package:flutter_graduation_project/user_screens/user_main_screen.dart';
+import 'package:flutter_graduation_project/user_screens/user_profile.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           theme: ThemeData(primaryColor: Colors.red),
           debugShowCheckedModeBanner: false,
-          home: const UserMainScreen(),
+          home: const UserProfileScreen(),
           routes: {
             LoingScreen.Id: (context) => LoingScreen(),
             SignUpScreen.Id: (context) => const SignUpScreen(),
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
             OttpScreen.id: (context) => const OttpScreen(),
             NewPasswordScreen.id: (context) => const NewPasswordScreen(),
             UserMainScreen.id: (context) => const UserMainScreen(),
+            UserProfileScreen.id: (context) => UserProfileScreen(),
           },
         );
       },
