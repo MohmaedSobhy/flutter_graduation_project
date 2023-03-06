@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_graduation_project/core/app_color.dart';
 import 'package:flutter_graduation_project/core/text_style_theme.dart';
 import 'package:flutter_graduation_project/widgets/cutome_button.dart';
 import 'package:sizer/sizer.dart';

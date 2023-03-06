@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/constanst.dart';
 import 'package:flutter_graduation_project/core/app_color.dart';
 import 'package:flutter_graduation_project/core/text_style_theme.dart';
+import 'package:flutter_graduation_project/views/card_profile_complete.dart';
 import 'package:flutter_graduation_project/widgets/cutome_button.dart';
 import 'package:sizer/sizer.dart';
 
@@ -139,58 +140,92 @@ class UserProfileScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 1.h,
+            height: 3.h,
           ),
-          ExpansionPanelList(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h, vertical: 0.5.h),
+            child: Card(
+              elevation: 1,
+              child: ExpansionTile(
+                title: Text(
+                  "Address",
+                  style: TextStyle(
+                      color: ColorManger.black, fontWeight: FontWeight.bold),
+                ),
+                children: const [
+                  ListTile(
+                    leading: Icon(Icons.location_on_outlined),
+                    title: Text("Cairo Almarge"),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h, vertical: 0.5.h),
+            child: Card(
+              elevation: 1,
+              child: ExpansionTile(
+                title: Text(
+                  "Skilles",
+                  style: TextStyle(
+                      color: ColorManger.black, fontWeight: FontWeight.bold),
+                ),
+                children: [
+                  ...List.generate(5, (index) {
+                    return ListTile(
+                      title: Text(
+                        "Flutter Developer",
+                        style: TextStyle(
+                          color: ColorManger.black,
+                        ),
+                      ),
+                    );
+                  }),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h, vertical: 0.5.h),
+            child: Card(
+              elevation: 1,
+              child: ExpansionTile(
+                title: Text(
+                  "Experiens",
+                  style: TextStyle(
+                      color: ColorManger.black, fontWeight: FontWeight.bold),
+                ),
+                children: const [
+                  ListTile(
+                    leading: Icon(
+                      Icons.watch_later_outlined,
+                      color: Colors.orange,
+                    ),
+                    title: Text("4 year Experiens in Field"),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h, vertical: 0.5.h),
+            child: Card(
+              elevation: 1,
+              child: ListTile(
+                leading: const Icon(
+                  Icons.logout,
+                  color: Colors.red,
+                ),
+                title: Text(
+                  "Logout",
+                  style: TextStyle(
+                      color: ColorManger.black, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
         ],
-      ),
-    );
-  }
-}
-
-class CardWidget extends StatelessWidget {
-  final String txt;
-  final IconData icon;
-  final VoidCallback onpressed;
-  final String buttonText;
-  CardWidget(
-      {super.key,
-      required this.txt,
-      required this.icon,
-      required this.onpressed,
-      required this.buttonText});
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 1.h, vertical: 2.h),
-      child: Card(
-        elevation: 3,
-        child: Container(
-          width: 40.w,
-          padding: const EdgeInsets.all(8),
-          decoration: BoxDecoration(
-            color: ColorManger.white,
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(
-                icon,
-                color: ColorManger.black,
-                size: 30,
-              ),
-              SizedBox(
-                height: 1.h,
-              ),
-              Text(
-                txt,
-                style: TextStyle(color: ColorManger.black),
-              ),
-              CustomeButton(txt: buttonText, function: onpressed),
-            ],
-          ),
-        ),
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_badged/flutter_badge.dart';
 import 'package:flutter_graduation_project/core/app_color.dart';
+import 'package:flutter_graduation_project/user_screens/user_profile.dart';
 import 'package:flutter_graduation_project/views/job_card.dart';
 import 'package:sizer/sizer.dart';
 import '../constanst.dart';
@@ -17,7 +18,9 @@ class HomeScreen extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(UserProfileScreen.id);
+            },
             child: CircleAvatar(
               backgroundImage: NetworkImage(ConstanstString.imageUrl),
             ),
