@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_graduation_project/constanst.dart';
+
+import 'package:flutter_graduation_project/core/app_color.dart';
 import 'package:sizer/sizer.dart';
 
 class CustomeButton extends StatelessWidget {
   final String txt;
   final VoidCallback function;
   final double? hight;
+
   const CustomeButton(
       {super.key, required this.txt, required this.function, this.hight});
 
@@ -18,15 +20,17 @@ class CustomeButton extends StatelessWidget {
         textColor: ColorManger.white,
         color: ColorManger.darkBlue,
         minWidth: double.infinity,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Text(
             txt,
-            style: TextStyle(fontSize: 15.sp),
+            style: TextStyle(fontSize: 9.sp),
           ),
         ),
       ),
     );
   }
 }
+// button for field login size 15
+// button for apply job

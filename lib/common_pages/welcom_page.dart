@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/common_pages/login_screen.dart';
 import 'package:flutter_graduation_project/common_pages/sign_up_screen.dart';
 import 'package:flutter_graduation_project/constanst.dart';
+import 'package:flutter_graduation_project/core/app_color.dart';
 import 'package:flutter_graduation_project/widgets/cutome_button.dart';
 
 class WelcomePage extends StatelessWidget {

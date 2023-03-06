@@ -40,6 +40,7 @@ dependencies:
   bottom_navy_bar:
   google_nav_bar:
   sizer:
+  flutter_badged: ^2.0.3
 
 dev_dependencies:
   flutter_test:

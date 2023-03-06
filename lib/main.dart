@@ -4,7 +4,6 @@ import 'package:flutter_graduation_project/common_pages/login_screen.dart';
 import 'package:flutter_graduation_project/common_pages/new_password_screen.dart';
 import 'package:flutter_graduation_project/common_pages/ottp_screen.dart';
 import 'package:flutter_graduation_project/common_pages/sign_up_screen.dart';
-import 'package:flutter_graduation_project/common_pages/welcom_page.dart';
 import 'package:flutter_graduation_project/user_screens/user_main_screen.dart';
 import 'package:sizer/sizer.dart';
 
@@ -21,14 +20,14 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           theme: ThemeData(primaryColor: Colors.red),
           debugShowCheckedModeBanner: false,
-          home: WelcomePage(),
+          home: const UserMainScreen(),
           routes: {
             LoingScreen.Id: (context) => LoingScreen(),
             SignUpScreen.Id: (context) => const SignUpScreen(),
             ForgetPasswordScreen.id: (context) => const ForgetPasswordScreen(),
             OttpScreen.id: (context) => const OttpScreen(),
             NewPasswordScreen.id: (context) => const NewPasswordScreen(),
-            UserMainScreen.id: (context) => UserMainScreen(),
+            UserMainScreen.id: (context) => const UserMainScreen(),
           },
         );
       },

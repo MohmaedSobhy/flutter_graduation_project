@@ -1,124 +1,101 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_graduation_project/constanst.dart';
+import 'package:flutter_graduation_project/core/app_color.dart';
+import 'package:flutter_graduation_project/widgets/cutome_button.dart';
 import 'package:sizer/sizer.dart';
 
-class JobCared extends StatelessWidget {
-  const JobCared({super.key});
+class TestingJobCard extends StatelessWidget {
+  const TestingJobCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 6,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 2.h),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Row(
-                children: [
-                  Text(
-                    "Manager  -",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.sp,
-                        fontWeight: FontWeight.w400),
-                  ),
-                  Text(
-                    "Business Development",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.sp,
-                        fontWeight: FontWeight.w400),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.money,
-                    color: ColorManger.black,
-                  ),
-                  SizedBox(
-                    width: 2.w,
-                  ),
-                  Text(
-                    "\$ 3000 perMonth",
-                    style: TextStyle(color: Colors.black, fontSize: 12.sp),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.location_on_outlined,
-                    color: ColorManger.black,
-                  ),
-                  SizedBox(
-                    width: 2.w,
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Cairo Almarge",
-                      style: TextStyle(color: Colors.black, fontSize: 10.sp),
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
+    return Container(
+      padding: const EdgeInsets.all(8),
+      margin: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.h),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        children: [
+          Image(
+            width: 15.w,
+            height: 12.h,
+            image: const AssetImage("assets/images/google.png"),
+          ),
+          SizedBox(
+            width: 3.w,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Text(
+                        "Software Devleoper",
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            color: ColorManger.black,
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                  const Spacer(),
-                  Text(
-                    "Full Time",
-                    style: TextStyle(
-                        color: Colors.orange,
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500),
-                  )
-                ],
-              ),
-            ),
-            Divider(
-              color: ColorManger.black,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 5.0),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.badge,
-                    color: ColorManger.black,
-                  ),
-                  SizedBox(width: 1.w),
-                  Text(
-                    "5 - 6 years",
-                    style: TextStyle(color: ColorManger.black),
-                  ),
-                  const Spacer(),
-                  const Text(
-                    "Twiter",
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: CircleAvatar(
-                      radius: 20,
-                      backgroundImage: AssetImage("assets/images/twiter.png"),
+                    Expanded(
+                        flex: 1,
+                        child: CustomeButton(txt: "Apply", function: () {}))
+                  ],
+                ),
+                SizedBox(
+                  height: 1.w,
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Icon(
+                      Icons.place_outlined,
+                      size: 20,
                     ),
-                  )
-                ],
-              ),
+                    SizedBox(width: 1.w),
+                    Expanded(
+                      child: Text(
+                        "Alexendria",
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: ColorManger.blackGrey,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 5.w),
+                    const Icon(
+                      Icons.card_travel_rounded,
+                      size: 20,
+                    ),
+                    SizedBox(width: 2.w),
+                    Expanded(
+                      child: Text(
+                        "Full Time",
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: TextStyle(
+                          color: ColorManger.blackGrey,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

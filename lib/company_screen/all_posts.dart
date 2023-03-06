@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/company_screen/editpost_1.dart';
-import 'package:flutter_graduation_project/constanst.dart';
 import 'package:sizer/sizer.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+
+import '../core/app_color.dart';
 
 class AllPosts extends StatelessWidget {
   const AllPosts({super.key});

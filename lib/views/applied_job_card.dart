@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/constanst.dart';
 import 'package:sizer/sizer.dart';
 
+import '../core/app_color.dart';
+
 class AppliedJobCard extends StatelessWidget {
   Color color;
   String txt;

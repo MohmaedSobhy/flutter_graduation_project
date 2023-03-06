@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/common_pages/new_password_screen.dart';
 import 'package:flutter_graduation_project/constanst.dart';
+import 'package:flutter_graduation_project/core/app_color.dart';
 import 'package:flutter_graduation_project/views/ottp_field.dart';
 import 'package:flutter_graduation_project/widgets/cutome_button.dart';
 import 'package:sizer/sizer.dart';

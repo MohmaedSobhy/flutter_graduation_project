@@ -78,6 +78,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_badged:
+    dependency: "direct main"
+    description:
+      name: flutter_badged
+      sha256: "826bfd729bd3de54cdd979e62fd59a613194f91add9f1c31e752dc8960bcd73e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.3"
   flutter_lints:
     dependency: "direct dev"
     description:

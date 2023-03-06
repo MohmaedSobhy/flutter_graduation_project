@@ -1,6 +1,6 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_graduation_project/constanst.dart';
+import 'package:flutter_graduation_project/core/app_color.dart';
 import 'package:flutter_graduation_project/user_screens/all_jobes_screen.dart';
 import 'package:flutter_graduation_project/user_screens/applied_jobes.dart';
 import 'package:flutter_graduation_project/user_screens/home_screen.dart';

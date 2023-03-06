@@ -6,7 +6,6 @@ import '../views/job_card.dart';
 class AllJobesScreens extends StatelessWidget {
   const AllJobesScreens({super.key});
   static String id = "AllJobesScreen";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +15,7 @@ class AllJobesScreens extends StatelessWidget {
           child: ListView.builder(
             itemCount: 10,
             itemBuilder: (context, index) {
-              return JobCared();
+              return TestingJobCard();
             },
           ),
         ),
