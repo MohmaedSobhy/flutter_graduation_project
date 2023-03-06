@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/core/app_color.dart';
+import 'package:flutter_graduation_project/core/text_style_theme.dart';
 import 'package:flutter_graduation_project/widgets/cutome_button.dart';
 import 'package:sizer/sizer.dart';
 
@@ -39,10 +40,7 @@ class TestingJobCard extends StatelessWidget {
                         "Software Devleoper",
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                            color: ColorManger.black,
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.bold),
+                        style: header,
                       ),
                     ),
                     Expanded(
@@ -63,15 +61,10 @@ class TestingJobCard extends StatelessWidget {
                     ),
                     SizedBox(width: 1.w),
                     Expanded(
-                      child: Text(
-                        "Alexendria",
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: ColorManger.blackGrey,
-                          fontSize: 14,
-                        ),
-                      ),
+                      child: Text("Alexendria",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: bodytext),
                     ),
                     SizedBox(width: 5.w),
                     const Icon(
@@ -80,15 +73,10 @@ class TestingJobCard extends StatelessWidget {
                     ),
                     SizedBox(width: 2.w),
                     Expanded(
-                      child: Text(
-                        "Full Time",
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: TextStyle(
-                          color: ColorManger.blackGrey,
-                          fontSize: 14,
-                        ),
-                      ),
+                      child: Text("Full Time",
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          style: bodytext),
                     ),
                   ],
                 )

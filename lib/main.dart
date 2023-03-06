@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           theme: ThemeData(primaryColor: Colors.red),
           debugShowCheckedModeBanner: false,
-          home: const UserProfileScreen(),
+          home: const UserMainScreen(),
           routes: {
             LoingScreen.Id: (context) => LoingScreen(),
             SignUpScreen.Id: (context) => const SignUpScreen(),

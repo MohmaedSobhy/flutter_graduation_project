@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_graduation_project/company_screen/company_profile.dart';
 import 'package:flutter_graduation_project/company_screen/editor.dart';
+import 'package:flutter_graduation_project/core/app_color.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class EditProfile extends StatelessWidget {
@@ -30,16 +28,16 @@ class EditProfile extends StatelessWidget {
                                   builder: (context) => Editor()));
                         },
                         child: Row(
-                          children: const [
+                          children: [
                             Icon(
                               Icons.edit_note_outlined,
                               size: 30,
-                              color: Color.fromRGBO(116, 136, 190, 1),
+                              color: ColorManger.darkBlue,
                             ),
                             Text(
                               "Edit Logo",
                               style: TextStyle(
-                                color: Color.fromRGBO(116, 136, 190, 1),
+                                color: ColorManger.darkBlue,
                                 fontSize: 15,
                               ),
                             ),
@@ -57,10 +55,11 @@ class EditProfile extends StatelessWidget {
                         bottomLeft: Radius.circular(60),
                         bottomRight: Radius.circular(60)),
                   ),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                  child:
+                      Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                     Padding(
-                      padding:
-                          const EdgeInsets.only(bottom: 10, top: 70, right: 170),
+                      padding: const EdgeInsets.only(
+                          bottom: 10, top: 70, right: 170),
                       child: Text(
                         'Edit Profile',
                         style: TextStyle(
@@ -130,7 +129,7 @@ class EditProfile extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 370, left: 20, right: 20),
                   child: Column(
                     children: [
-                       Container(
+                      Container(
                         decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 209, 209, 209),
                             borderRadius: BorderRadius.circular(30)),
@@ -153,43 +152,51 @@ class EditProfile extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height:15,),
+                      const SizedBox(
+                        height: 15,
+                      ),
                       Padding(
-                        padding:  EdgeInsets.only(top:70,bottom: 0),
+                        padding: EdgeInsets.only(top: 70, bottom: 0),
                         child: TextFormField(
                           decoration: const InputDecoration(
                             labelText: 'country',
                             border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(50)),
-                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(50)),
                             ),
+                          ),
                         ),
                       ),
-                        const SizedBox(height: 15,),
+                      const SizedBox(
+                        height: 15,
+                      ),
                       Padding(
-                        padding: const EdgeInsets.only(top:0 ),
+                        padding: const EdgeInsets.only(top: 0),
                         child: TextFormField(
-                          
-                            decoration: const InputDecoration(
+                          decoration: const InputDecoration(
                             labelText: 'city',
-                            
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(50)),),
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(50)),
                             ),
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 15,),
+                      const SizedBox(
+                        height: 15,
+                      ),
                       Padding(
-                        padding: const EdgeInsets.only(top:0 ),
+                        padding: const EdgeInsets.only(top: 0),
                         child: TextFormField(
-                          
-                            decoration: const InputDecoration(
+                          decoration: const InputDecoration(
                             labelText: 'Residential area',
-                            
-                            border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(50)),),
+                            border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(50)),
                             ),
+                          ),
                         ),
                       ),
-                     
                     ],
                   ),
                 ),
@@ -223,14 +230,12 @@ class EditProfile extends StatelessWidget {
                     ],
                   ),
                 ),
-                
               ],
-              
             ),
           ),
-           ),
+        ),
       ),
-           ///////////////////////////////////////////////
+      ///////////////////////////////////////////////
       bottomNavigationBar: Container(
         color: Color.fromRGBO(116, 136, 190, 1),
         child: Padding(
@@ -258,7 +263,6 @@ class EditProfile extends StatelessWidget {
               ]),
         ),
       ),
-     
     );
   }
 }

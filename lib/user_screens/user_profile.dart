@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_graduation_project/constanst.dart';
 import 'package:flutter_graduation_project/core/app_color.dart';
+import 'package:flutter_graduation_project/core/text_style_theme.dart';
+import 'package:flutter_graduation_project/widgets/cutome_button.dart';
 import 'package:sizer/sizer.dart';
 
 class UserProfileScreen extends StatelessWidget {
@@ -92,7 +94,103 @@ class UserProfileScreen extends StatelessWidget {
               }),
             ),
           ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(children: [
+                CardWidget(
+                    txt: "Your Details",
+                    icon: Icons.account_box_outlined,
+                    onpressed: () {},
+                    buttonText: "Complete"),
+                CardWidget(
+                    txt: "Upload Resume",
+                    icon: Icons.upload_file_rounded,
+                    onpressed: () {},
+                    buttonText: "Upload"),
+                CardWidget(
+                    txt: "Add Experience",
+                    icon: Icons.person,
+                    onpressed: () {},
+                    buttonText: "Complete"),
+                CardWidget(
+                    txt: "Your Details",
+                    icon: Icons.person,
+                    onpressed: () {},
+                    buttonText: "Complete"),
+              ]),
+            ),
+          ),
+          const Text(
+            "About Me",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 1.h,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 1.h),
+            child: Text(
+              "I am a talented, ambitious and hardworking individual, with broad skills and experience in digital and printed marketing, social media and leading projects.",
+              textAlign: TextAlign.center,
+              style: txtStyleHeader,
+            ),
+          ),
+          SizedBox(
+            height: 1.h,
+          ),
+          ExpansionPanelList(),
         ],
+      ),
+    );
+  }
+}
+
+class CardWidget extends StatelessWidget {
+  final String txt;
+  final IconData icon;
+  final VoidCallback onpressed;
+  final String buttonText;
+  CardWidget(
+      {super.key,
+      required this.txt,
+      required this.icon,
+      required this.onpressed,
+      required this.buttonText});
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 1.h, vertical: 2.h),
+      child: Card(
+        elevation: 3,
+        child: Container(
+          width: 40.w,
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: ColorManger.white,
+            borderRadius: BorderRadius.circular(5),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                icon,
+                color: ColorManger.black,
+                size: 30,
+              ),
+              SizedBox(
+                height: 1.h,
+              ),
+              Text(
+                txt,
+                style: TextStyle(color: ColorManger.black),
+              ),
+              CustomeButton(txt: buttonText, function: onpressed),
+            ],
+          ),
+        ),
       ),
     );
   }
